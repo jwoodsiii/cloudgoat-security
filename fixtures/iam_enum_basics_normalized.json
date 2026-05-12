@@ -1,0 +1,163 @@
+{
+  "resources": [
+    {
+      "type": "aws_iam_access_key",
+      "name": "bob_keys",
+      "address": "aws_iam_access_key.bob_keys",
+      "values": {
+        "create_date": "2026-05-06T00:29:30Z",
+        "encrypted_secret": null,
+        "encrypted_ses_smtp_password_v4": null,
+        "id": "REDACTED",
+        "key_fingerprint": null,
+        "pgp_key": null,
+        "secret": "REDACTED",
+        "ses_smtp_password_v4": "REDACTED",
+        "status": "Active",
+        "user": "cg-bob-cgid0cib2icpwl"
+      }
+    },
+    {
+      "type": "aws_iam_group",
+      "name": "flag3_group",
+      "address": "aws_iam_group.flag3_group",
+      "values": {
+        "arn": "arn:aws:iam::614638497188:group/HSM_gr0up_m3mb3rsh1p_f0und/cg-flag3-group-cgid0cib2icpwl",
+        "id": "cg-flag3-group-cgid0cib2icpwl",
+        "name": "cg-flag3-group-cgid0cib2icpwl",
+        "path": "/HSM_gr0up_m3mb3rsh1p_f0und/",
+        "unique_id": "AGPAY6G2PFWSLYKSDIFFO"
+      }
+    },
+    {
+      "type": "aws_iam_group_membership",
+      "name": "bob_group_membership",
+      "address": "aws_iam_group_membership.bob_group_membership",
+      "values": {
+        "group": "cg-flag3-group-cgid0cib2icpwl",
+        "id": "cg-bob-group-membership-cgid0cib2icpwl",
+        "name": "cg-bob-group-membership-cgid0cib2icpwl",
+        "users": [
+          "cg-bob-cgid0cib2icpwl"
+        ]
+      }
+    },
+    {
+      "type": "aws_iam_policy",
+      "name": "flag1_managed_policy",
+      "address": "aws_iam_policy.flag1_managed_policy",
+      "values": {
+        "arn": "arn:aws:iam::614638497188:policy/cg-flag1-managed-policy-cgid0cib2icpwl",
+        "attachment_count": 0,
+        "delay_after_policy_creation_in_ms": null,
+        "description": "HSM{m4n4g3d_p0l1cy_m4st3r}",
+        "id": "arn:aws:iam::614638497188:policy/cg-flag1-managed-policy-cgid0cib2icpwl",
+        "name": "cg-flag1-managed-policy-cgid0cib2icpwl",
+        "name_prefix": "",
+        "path": "/",
+        "policy": "{\"Statement\":[{\"Action\":[\"s3:ListBucket\",\"s3:GetObject\"],\"Effect\":\"Allow\",\"Resource\":\"arn:aws:s3:::HSM{s3cr3t_js0n_str1ng}\"}],\"Version\":\"2012-10-17\"}",
+        "policy_id": "ANPAY6G2PFWSIP3RCRFV7",
+        "tags": null,
+        "tags_all": {
+          "Scenario": "scenario_template",
+          "Stack": "CloudGoat"
+        }
+      }
+    },
+    {
+      "type": "aws_iam_role",
+      "name": "flag4_role",
+      "address": "aws_iam_role.flag4_role",
+      "values": {
+        "arn": "arn:aws:iam::614638497188:role/cg-flag4-role-cgid0cib2icpwl",
+        "assume_role_policy": "{\"Statement\":[{\"Action\":\"sts:AssumeRole\",\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"arn:aws:iam::614638497188:user/cg-bob-cgid0cib2icpwl\"}}],\"Version\":\"2012-10-17\"}",
+        "create_date": "2026-05-06T00:29:38Z",
+        "description": "",
+        "force_detach_policies": false,
+        "id": "cg-flag4-role-cgid0cib2icpwl",
+        "inline_policy": [],
+        "managed_policy_arns": [],
+        "max_session_duration": 3600,
+        "name": "cg-flag4-role-cgid0cib2icpwl",
+        "name_prefix": "",
+        "path": "/",
+        "permissions_boundary": "",
+        "tags": {
+          "Flag": "HSM-r0l3_trus1_f0und"
+        },
+        "tags_all": {
+          "Flag": "HSM-r0l3_trus1_f0und",
+          "Scenario": "scenario_template",
+          "Stack": "CloudGoat"
+        },
+        "unique_id": "AROAY6G2PFWSMEY6SBHQ5"
+      }
+    },
+    {
+      "type": "aws_iam_role_policy",
+      "name": "flag4_role_policy",
+      "address": "aws_iam_role_policy.flag4_role_policy",
+      "values": {
+        "id": "cg-flag4-role-cgid0cib2icpwl:cg-flag4-role-policy-cgid0cib2icpwl",
+        "name": "cg-flag4-role-policy-cgid0cib2icpwl",
+        "name_prefix": "",
+        "policy": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Action\":\"iam:ListUsers\",\"Effect\":\"Allow\",\"Resource\":\"*\"}]}",
+        "role": "cg-flag4-role-cgid0cib2icpwl"
+      }
+    },
+    {
+      "type": "aws_iam_user",
+      "name": "bob",
+      "address": "aws_iam_user.bob",
+      "values": {
+        "arn": "arn:aws:iam::614638497188:user/cg-bob-cgid0cib2icpwl",
+        "force_destroy": false,
+        "id": "cg-bob-cgid0cib2icpwl",
+        "name": "cg-bob-cgid0cib2icpwl",
+        "path": "/",
+        "permissions_boundary": "",
+        "tags": {
+          "Message": "Enumerate me"
+        },
+        "tags_all": {
+          "Message": "Enumerate me",
+          "Scenario": "scenario_template",
+          "Stack": "CloudGoat"
+        },
+        "unique_id": "AIDAY6G2PFWSAZIDV3AQZ"
+      }
+    },
+    {
+      "type": "aws_iam_user_policy",
+      "name": "flag2_inline_policy",
+      "address": "aws_iam_user_policy.flag2_inline_policy",
+      "values": {
+        "id": "cg-bob-cgid0cib2icpwl:cg-flag2-inline-policy-cgid0cib2icpwl",
+        "name": "cg-flag2-inline-policy-cgid0cib2icpwl",
+        "name_prefix": "",
+        "policy": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Action\":\"ec2:DescribeInstances\",\"Effect\":\"Allow\",\"Resource\":\"*\",\"Sid\":\"HSM1nl1n3p0l1cyd1sc0v3r3d\"}]}",
+        "user": "cg-bob-cgid0cib2icpwl"
+      }
+    },
+    {
+      "type": "aws_iam_user_policy_attachment",
+      "name": "bob_base_permissions",
+      "address": "aws_iam_user_policy_attachment.bob_base_permissions",
+      "values": {
+        "id": "cg-bob-cgid0cib2icpwl/arn:aws:iam::aws:policy/IAMReadOnlyAccess",
+        "policy_arn": "arn:aws:iam::aws:policy/IAMReadOnlyAccess",
+        "user": "cg-bob-cgid0cib2icpwl"
+      }
+    },
+    {
+      "type": "aws_iam_user_policy_attachment",
+      "name": "bob_managed_attach",
+      "address": "aws_iam_user_policy_attachment.bob_managed_attach",
+      "values": {
+        "id": "cg-bob-cgid0cib2icpwl/arn:aws:iam::614638497188:policy/cg-flag1-managed-policy-cgid0cib2icpwl",
+        "policy_arn": "arn:aws:iam::614638497188:policy/cg-flag1-managed-policy-cgid0cib2icpwl",
+        "user": "cg-bob-cgid0cib2icpwl"
+      }
+    }
+  ]
+}

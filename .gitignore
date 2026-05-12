@@ -7,6 +7,7 @@
 
 # raw cloudgoat tfstate
 fixtures/*_raw.json
+fixtures/*_basics.json
 
 # Crash log files
 crash.log
