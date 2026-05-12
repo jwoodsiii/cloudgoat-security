@@ -5,6 +5,9 @@
 *.tfstate
 *.tfstate.*
 
+# raw cloudgoat tfstate
+fixtures/*_raw.json
+
 # Crash log files
 crash.log
 crash.*.log

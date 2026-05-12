@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(opa test *)",
+      "Bash(conftest --version)",
+      "Bash(opa version *)",
+      "Bash(conftest test *)"
+    ]
+  }
+}
